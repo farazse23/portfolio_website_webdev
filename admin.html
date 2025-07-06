@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Customizer</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/profile.png" type="image/x-icon">
+</head>
+<body data-theme="default">
+    <div class="admin-header">
+        <div class="container">
+            <h1><i class="fas fa-cogs"></i> Portfolio Customizer</h1>
+        </div>
+    </div>
+    
+    <div class="admin-container">
+        <div class="admin-sidebar">
+            <ul>
+                <li><a href="#personal-info" class="active"><i class="fas fa-user"></i> Personal Info</a></li>
+                <li><a href="#home-section"><i class="fas fa-home"></i> Home Section</a></li>
+                <li><a href="#about-section"><i class="fas fa-info-circle"></i> About Section</a></li>
+                <li><a href="#projects-section"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#skills-section"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#contact-section"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#social-section"><i class="fas fa-share-alt"></i> Social Links</a></li>
+                <li><a href="#theme-section"><i class="fas fa-palette"></i> Color Theme</a></li>
+            </ul>
+        </div>
+        
+        <div class="admin-main">
+            <!-- Personal Info Section -->
+            <section id="personal-info" class="admin-section active">
+                <h2><i class="fas fa-user"></i> Personal Information</h2>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="user-name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Your Profession</label>
+                    <input type="text" id="user-title" placeholder="Web Developer">
+                </div>
+                <div class="form-group">
+                    <label>Upload Your Logo</label>
+                    <input type="file" id="logo-upload" accept="image/*">
+                    <div class="file-preview-container">
+                        <img id="logo-preview" class="file-preview" src="" alt="Logo Preview">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Home Section -->
+            <section id="home-section" class="admin-section">
+                <h2><i class="fas fa-home"></i> Home Section</h2>
+                <div class="form-group">
+                    <label>Upload Hero Background Image</label>
+                    <input type="file" id="hero-upload" accept="image/*">
+                    <div class="file-preview-container">
+                        <img id="hero-preview" class="file-preview" src="" alt="Hero Preview">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="about-section" class="admin-section">
+                <h2><i class="fas fa-info-circle"></i> About Section</h2>
+                <div class="form-group">
+                    <label>About Text</label>
+                    <textarea id="about-text" placeholder="Tell something about yourself..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Upload About Image</label>
+                    <input type="file" id="about-upload" accept="image/*">
+                    <div class="file-preview-container">
+                        <img id="about-preview" class="file-preview" src="" alt="About Preview">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="projects-section" class="admin-section">
+                <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                <button id="add-project" class="btn"><i class="fas fa-plus"></i> Add Project</button>
+                <div class="projects-list" id="projects-list">
+                    <!-- Projects will be added here -->
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="skills-section" class="admin-section">
+                <h2><i class="fas fa-code"></i> Skills</h2>
+                <div class="form-group">
+                    <label>Your Skills (comma separated)</label>
+                    <input type="text" id="user-skills" placeholder="HTML, CSS, JavaScript, React">
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact-section" class="admin-section">
+                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" id="user-email" placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="user-phone" placeholder="+1 (123) 456-7890">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea id="user-address" placeholder="123 Main St, City, Country"></textarea>
+                </div>
+            </section>
+            
+            <!-- Social Links Section -->
+            <section id="social-section" class="admin-section">
+                <h2><i class="fas fa-share-alt"></i> Social Links</h2>
+                <div class="form-group">
+                    <label><i class="fab fa-github"></i> GitHub Profile URL</label>
+                    <input type="url" id="github-link" placeholder="https://github.com/yourusername">
+                </div>
+                <div class="form-group">
+                    <label><i class="fab fa-linkedin"></i> LinkedIn Profile URL</label>
+                    <input type="url" id="linkedin-link" placeholder="https://linkedin.com/in/yourusername">
+                </div>
+                <div class="form-group">
+                    <label><i class="fab fa-instagram"></i> Instagram Profile URL</label>
+                    <input type="url" id="instagram-link" placeholder="https://instagram.com/yourusername">
+                </div>
+                <div class="form-group">
+                    <label><i class="fab fa-facebook"></i> Facebook Profile URL</label>
+                    <input type="url" id="facebook-link" placeholder="https://facebook.com/yourusername">
+                </div>
+            </section>
+            
+            <!-- Color Theme Section -->
+            <section id="theme-section" class="admin-section">
+                <h2><i class="fas fa-palette"></i> Color Theme</h2>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="default">
+                        <div class="theme-preview default-theme"></div>
+                        <span>Default</span>
+                    </div>
+                    <div class="theme-option" data-theme="blue">
+                        <div class="theme-preview blue-theme"></div>
+                        <span>Blue</span>
+                    </div>
+                    <div class="theme-option" data-theme="green">
+                        <div class="theme-preview green-theme"></div>
+                        <span>Green</span>
+                    </div>
+                    <div class="theme-option" data-theme="red">
+                        <div class="theme-preview red-theme"></div>
+                        <span>Red</span>
+                    </div>
+                    <div class="theme-option" data-theme="purple">
+                        <div class="theme-preview purple-theme"></div>
+                        <span>Purple</span>
+                    </div>
+                    <div class="theme-option" data-theme="dark">
+                        <div class="theme-preview dark-theme"></div>
+                        <span>Dark</span>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="admin-actions">
+                <button id="save-all" class="btn btn-save"><i class="fas fa-save"></i> Save All Changes</button>
+                <a href="index.html" class="btn btn-preview"><i class="fas fa-eye"></i> Preview Portfolio</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="admin-footer">
+        <p>&copy; <span id="admin-year"></span> Portfolio Customizer By Faraz Ahmed</p>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script>
+        // Set current year in admin copyright
+        document.getElementById('admin-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
